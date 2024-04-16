@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct DiscoveryView: View {
+    var body: some View {
+        VStack {
+            Text("Discover Your Scent")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding()
+        }
+    }
+}
+
