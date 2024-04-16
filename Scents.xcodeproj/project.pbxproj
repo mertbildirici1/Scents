@@ -14,6 +14,7 @@
 		10C0D0D52BCE098400CCE543 /* ScentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0D0D42BCE098400CCE543 /* ScentsTests.swift */; };
 		10C0D0DF2BCE098400CCE543 /* ScentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0D0DE2BCE098400CCE543 /* ScentsUITests.swift */; };
 		10C0D0E12BCE098400CCE543 /* ScentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0D0E02BCE098400CCE543 /* ScentsUITestsLaunchTests.swift */; };
+		10C0D0EE2BCE0A1500CCE543 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0D0ED2BCE0A1500CCE543 /* Discover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		10C0D0DA2BCE098400CCE543 /* ScentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C0D0DE2BCE098400CCE543 /* ScentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScentsUITests.swift; sourceTree = "<group>"; };
 		10C0D0E02BCE098400CCE543 /* ScentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		10C0D0ED2BCE0A1500CCE543 /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				10C0D0C32BCE098300CCE543 /* ScentsApp.swift */,
 				10C0D0C52BCE098300CCE543 /* ContentView.swift */,
+				10C0D0ED2BCE0A1500CCE543 /* Discover.swift */,
 				10C0D0C72BCE098400CCE543 /* Assets.xcassets */,
 				10C0D0C92BCE098400CCE543 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				10C0D0C62BCE098300CCE543 /* ContentView.swift in Sources */,
 				10C0D0C42BCE098300CCE543 /* ScentsApp.swift in Sources */,
+				10C0D0EE2BCE0A1500CCE543 /* Discover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
