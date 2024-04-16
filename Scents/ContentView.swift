@@ -7,15 +7,34 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct ContentView: View {
+    var body: some View {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+
+            DiscoveryView()
+                .tabItem {
+                    Label("Discovery", systemImage: "magnifyingglass")
+                }
+
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
+        }
+    }
+}
+
+struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
                 Text("Hello, Mert!")
-
                 NavigationLink(destination: DiscoveryView()) {
                     Text("DISCOVER")
                         .fontWeight(.bold)
@@ -30,10 +49,17 @@ struct ContentView: View {
     }
 }
 
+struct ProfileView: View {
+    var body: some View {
+        Text("Profile View")
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
 
 
