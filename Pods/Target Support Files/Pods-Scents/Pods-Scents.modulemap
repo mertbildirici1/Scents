@@ -1,0 +1,6 @@
+framework module Pods_Scents {
+  umbrella header "Pods-Scents-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,15 +1,17 @@
-//
-//  ContentView.swift
-//  Scents
-//
-//  Created by Mert Bildirici on 4/15/24.
-//
-
-import SwiftUI
-
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.backgroundColor = .clear
+        appearance.shadowColor = nil
+
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
+
     var body: some View {
         TabView {
             HomeView()
@@ -19,7 +21,7 @@ struct ContentView: View {
 
             DiscoveryView()
                 .tabItem {
-                    Label("Discovery", systemImage: "magnifyingglass")
+                    Label("Discover", systemImage: "magnifyingglass")
                 }
 
             ProfileView()
@@ -33,33 +35,43 @@ struct ContentView: View {
 struct HomeView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Hello, Mert!")
-                NavigationLink(destination: DiscoveryView()) {
-                    Text("DISCOVER")
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(10)
+            TabView {
+                ForEach(0..<5, id: \.self) { index in
+                    PageView(index: index)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(colors[index % colors.count])
+                        .clipped()
                 }
             }
-            .padding()
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.all)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
-struct ProfileView: View {
+struct PageView: View {
+    let index: Int
+    
     var body: some View {
-        Text("Profile View")
+        VStack {
+            Text("Page \(index)")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .padding()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .clipped()
     }
 }
+
+// Sample color array for background colors
+let colors: [Color] = [.red, .green, .blue, .orange, .pink]
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-
-
-

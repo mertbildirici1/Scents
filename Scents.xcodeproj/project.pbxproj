@@ -21,6 +21,7 @@
 		10C0D0F92BCE311D00CCE543 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 10C0D0F82BCE311D00CCE543 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		10C0D0FB2BCE311D00CCE543 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 10C0D0FA2BCE311D00CCE543 /* FirebaseAppCheck */; };
 		10C0D0FD2BCE324700CCE543 /* DiscoveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0D0FC2BCE324700CCE543 /* DiscoveryView.swift */; };
+		10C0D1052BCF29C200CCE543 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0D1042BCF29C200CCE543 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		10C0D0E02BCE098400CCE543 /* ScentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		10C0D0EF2BCE30A000CCE543 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10C0D0FC2BCE324700CCE543 /* DiscoveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryView.swift; sourceTree = "<group>"; };
+		10C0D1042BCF29C200CCE543 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				10C0D0C32BCE098300CCE543 /* ScentsApp.swift */,
 				10C0D0C52BCE098300CCE543 /* ContentView.swift */,
 				10C0D0FC2BCE324700CCE543 /* DiscoveryView.swift */,
+				10C0D1042BCF29C200CCE543 /* ProfileView.swift */,
 				10C0D0EF2BCE30A000CCE543 /* GoogleService-Info.plist */,
 				10C0D0C72BCE098400CCE543 /* Assets.xcassets */,
 				10C0D0C92BCE098400CCE543 /* Preview Content */,
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C0D1052BCF29C200CCE543 /* ProfileView.swift in Sources */,
 				10C0D0C62BCE098300CCE543 /* ContentView.swift in Sources */,
 				10C0D0FD2BCE324700CCE543 /* DiscoveryView.swift in Sources */,
 				10C0D0C42BCE098300CCE543 /* ScentsApp.swift in Sources */,
