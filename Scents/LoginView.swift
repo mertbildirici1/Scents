@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct LoginView: View {
+    var body: some View {
+        VStack {
+            Text("Please Sign In")
+            Button("Sign In") {
+                // Implement sign-in functionality here
+            }
+        }
+    }
+}
+

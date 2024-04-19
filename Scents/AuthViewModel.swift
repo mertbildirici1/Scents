@@ -1,8 +1,12 @@
-//
-//  AuthViewModel.swift
-//  Scents
-//
-//  Created by Mert Bildirici on 4/16/24.
-//
+import SwiftUI
 
-import Foundation
+class AuthViewModel: ObservableObject {
+    @Published var isAuthenticated = true
+
+    // Log out function
+    func logOut() {
+        // Clear authentication tokens or user session data
+        isAuthenticated = false
+        // Additional clean up as necessary
+    }
+}

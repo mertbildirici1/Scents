@@ -20,10 +20,17 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct ScentsApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var authViewModel = AuthViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authViewModel.isAuthenticated {
+                ContentView()
+                    .environmentObject(authViewModel)
+            } else {
+                LoginView()
+            }
         }
     }
 }
+

@@ -53,6 +53,8 @@ struct HomeView: View {
 
 struct PageView: View {
     let index: Int
+    @State private var isLiked = false
+    @State private var isSaved = false
     
     var body: some View {
         VStack {
@@ -60,12 +62,40 @@ struct PageView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .padding()
+            
+
+            // Buttons aligned on the right side of the screen
+            HStack {
+                Spacer() // Pushes the buttons to the right
+                
+                VStack {
+                    Button(action: {
+                        isLiked.toggle()  // Toggle the like state
+                    }) {
+                        Image(systemName: isLiked ? "heart.fill" : "heart")
+                            .foregroundColor(isLiked ? .red : .white)
+                            .font(.title)
+                            .padding()
+                    }
+
+                    Button(action: {
+                        isSaved.toggle()  // Toggle the saved state
+                    }) {
+                        Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                            .foregroundColor(isSaved ? .yellow : .white)
+                            .font(.title)
+                            .padding()
+                    }
+                }
+            }
+            .padding(.trailing, 20)  // Add padding on the right for some spacing from the edge
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(colors[index % colors.count])
         .clipped()
     }
 }
+
 
 // Sample color array for background colors
 let colors: [Color] = [.red, .green, .blue, .orange, .pink]
@@ -75,3 +105,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
